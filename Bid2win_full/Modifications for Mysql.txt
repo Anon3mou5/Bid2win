@@ -1,0 +1,28 @@
+Replace given DATABASES with the following in setting of your project :-
+
+DATABASES = {
+    'default': {
+    'ENGINE': 'django.db.backends.mysql',
+    'NAME': 'django_practice', #Database Name
+    'USER': 'root', #User Name
+    'PASSWORD': 'rootroot', #Password
+    'HOST': '', #Leave empty in case of local host
+    'PORT': '3306', #Port no. on which mysql is running
+    'OPTIONS': {
+        'init_command': "SET sql_mode='STRICT_TRANS_TABLES'" #optional not required
+    }
+    }
+}
+
+Install dependencies :-
+
+pip3 install mysqlclient
+pip3 install PyMySQL
+
+Inside the __init__.py file of your Project,  add the following lines:-
+
+import pymysql
+
+pymysql.version_info = (1, 3, 13, "final", 0)
+pymysql.install_as_MySQLdb()
+

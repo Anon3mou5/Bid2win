@@ -1,0 +1,35 @@
+
+Hi you can simply do it
+
+step1:
+views.py ==>
+
+from django.http import HttpResponse
+import csv
+
+def export_users_csv(request):
+    response = HttpResponse(content_type='text/csv')
+    response['Content-Disposition'] = 'attachment; filename="users.csv"'
+
+    writer = csv.writer(response)
+    writer.writerow(['employee','IG', 'follower', 'email', 'website', 'DA', 'youtube_url', 'youtube_name', 'subscriber', 'type','country'])
+
+    users = Library.objects.all().values_list('employee','IG', 'follower', 'email', 'website', 'DA', 'youtube_url', 'youtube_name', 'subscriber', 'type','country')
+    for user in users:
+        writer.writerow(user)
+
+    return response
+
+
+step2:
+urls.py ==>
+
+from .views import export_users_csv
+
+path('export', export_users_csv, name='export_users_csv'),
+
+
+step3:
+page.html ==>
+
+<a href="{% url 'export_users_csv' %}">Export all users</a>
