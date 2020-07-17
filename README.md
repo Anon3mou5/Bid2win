@@ -3,16 +3,23 @@ It is a Responsive Bidding Web App built using Html,CSS,Bootstrap,Jquery as Fron
 
 # Bid values
 ==> There are 10,000 bid values
+
 ==> user can bid on any Bid-value,Once after bidding,the bid-value is shown whether it is Already Bid by someone else or not
+
 ==> Red for Already Bid and Blue for only single bid
+
 ==> Once after Bidding on values it cannot be revoked
 
 # How to Play
 
 ==> Login or Sign up at https://bid2win.pythonanywhere.com
+
 ==> Provide Reference number to get bid for free
+
 ==> Place the bid in Bidding View
+
 ==> Purchase the bids once after its empty through PAYTM
+
 ==> If you are lucky ,i.e IF your BID is Least Minimum Value among 10k values then you won the bidding competion , the product you bid will be delivered to you
 
 # How it works
