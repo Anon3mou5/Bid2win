@@ -1,5 +1,5 @@
 # Bid2win
-It is a Responsive Bidding Web App built using Html,CSS,Bootstrap,Jquery as FrontEnd and Django Framework as Middleware and SQLlite as Database
+It is a Bidding Web App built using Html,CSS,Bootstrap,Jquery as FrontEnd and Django Framework as Middleware and SQLlite as Database
 
 # Bid values
 ==> There are 10,000 bid values
